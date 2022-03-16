@@ -27,14 +27,15 @@
 ```
 
 ## Features
-- 可配置计算单元
-- 可配置并行规模
-- 可配置计算精读
-- 可变输入、输出长度
-- 多核心并行计算
-- 序列长度可定义
-- 可根据硬件资源规模灵活配置
-- 支持Vitis CL/HLS/SD Accel等不同场景
+- Configurable compute units
+- Configurable parallel scale
+- Configurable computational refinement
+- Variable input and output length
+- Multi-core parallel computing
+- Definable sequence length
+- Flexible configuration according to hardware resource size
+- Supports different scenarios such as Vitis CL/HLS/SD Accel
+
 
 ## Support Hardware
 - Zynq/MP（with generic uio）
@@ -100,17 +101,17 @@ fpga cost: 2653.1589ms
 cpu  cost: 90585.0078ms
 ```
 ## Known issues
-- FP32 计算精度误差（0.01%)
-- 部分数据FP32计算溢出
-- DSP48 占用过高导致布线困难
-- C1100 xdma 驱动无法正常工作
+- FP32 calculation accuracy error (0.01%)
+- Part of the data FP32 calculation overflow
+- DSP48 over-occupancy causes wiring difficulties
+- C1100 xdma driver does not work properly
 
 ## TODO
-- 测试 Versal 系列
-  - 硬件的DSP58性能提升巨大，需求VCK5000
-- 提高Gatk 数据输入效率
-  - 提高Gatk的数据输入能力，增加并行计算，以便于利用多个FPGA计算单元
-- 突破OpenCL 频率、规模限制
-  - C1100 300/500 Mhz 限制了部署核心的数量和频率
-  - 如果驱动稳定，XDMA/QDMA实现性能会更好一些
-  - 目前面积占用较少
+- Testing Versal Series
+  - Hardware's DSP58 performance improvement is huge and requires VCK5000
+- Improve Gatk data input efficiency
+  - Improve Gatk data input capability and increase parallel computing to facilitate the use of multiple FPGA computing units
+- Break OpenCL frequency, scale limits
+  - C1100 300/500 Mhz limits the number and frequency of deployed cores
+  - XDMA/QDMA implementation performance would be better if the driver is stable
+  - Current area footprint is less
