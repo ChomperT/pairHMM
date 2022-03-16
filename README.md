@@ -1,4 +1,4 @@
-# PairHMM Acceleter by FPGA
+# PairHMM Accelerator by FPGA
 
 ## Source Tree
 ```
