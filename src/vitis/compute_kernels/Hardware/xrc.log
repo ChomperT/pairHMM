@@ -1,0 +1,11 @@
+Wed Mar  9 10:59:32 2022: Server was asked to start on port: '37529'
+Wed Mar  9 10:59:32 2022: Server is using token UUID: '70f0df64-2417-42d2-88ca-af5c2c239bdc'
+Wed Mar  9 10:59:32 2022: Attempting to start server on port '37529'
+Wed Mar  9 10:59:32 2022: XRC main fifo: created main fifo '/tmp/xrcmain70f0df64-2417-42d2-88ca-af5c2c239bdc', fd read = 14
+Wed Mar  9 10:59:32 2022: Running Rule Check Server
+Wed Mar  9 10:59:32 2022: Version 1.6.1
+Wed Mar  9 10:59:33 2022: Rule Check Server: Accepted socket connection from client
+Wed Mar  9 10:59:33 2022: EXCHANGE_TOKEN received, server token: 70f0df64-2417-42d2-88ca-af5c2c239bdc, passed token: 70f0df64-2417-42d2-88ca-af5c2c239bdc
+Wed Mar  9 10:59:33 2022: SESSION_MGR: creating session with session uuid: 'dad7399a-312e-482b-bf31-7172a472e97f' and name 'compute'
+Wed Mar  9 10:59:57 2022: Rule Check Server: Accepted socket connection from client
+Wed Mar  9 11:00:42 2022: SESSION_MGR: closing session for UUID 'dad7399a-312e-482b-bf31-7172a472e97f' with name 'compute'

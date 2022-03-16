@@ -1,0 +1,283 @@
+2022-03-08T18:10:27.87581300255-18:10:27 **** Incremental Build of configuration Hardware for project gene_system_hw_link ****
+000-make all 
+000-/home/chomper/workspace/Xilinx/Vitis/2021.2/bin/v++ --target hw --link --config compute-link.cfg -o"compute.xclbin" ../../compute_kernels/Hardware/build/compute.xo
+000-Option Map File Used: '/home/chomper/workspace/Xilinx/Vitis/2021.2/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2021.2 (64-bit)
+000-  **** SW Build 3363252 on 2021-10-14-04:41:01
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+000-	Reports: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/reports/link
+000-	Log files: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/logs/link
+000-Running Dispatch Server on port: 37155
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.xclbin.link_summary, at Tue Mar  8 18:10:42 2022
+000-INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Tue Mar  8 18:10:42 2022
+000-INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55n_gen3x4_xdma_1_202110_1/xilinx_u55n_gen3x4_xdma_1_202110_1.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55n_gen3x4_xdma_1_202110_1/hw/hw.xsa'
+000-INFO: [v++ 74-78] Compiler Version string: 2021.2
+000-INFO: [v++ 60-629] Linking for hardware target
+000-INFO: [v++ 60-423]   Target device: xilinx_u55n_gen3x4_xdma_1_202110_1
+000-INFO: [v++ 60-1332] Run 'run_link' status: Not started
+000-INFO: [v++ 60-1443] [18:10:43] Run run_link: Step system_link: Started
+000-INFO: [v++ 60-1453] Command Line: system_link --xo /home/chomper/workspace/Vivado/Vitis/compute_kernels/Hardware/build/compute.xo -keep --config /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u55n_gen3x4_xdma_1_202110_1/xilinx_u55n_gen3x4_xdma_1_202110_1.xpfm --target hw --output_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int --temp_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link
+000-INFO: [v++ 60-1454] Run Directory: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link
+000-INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Tue Mar  8 18:10:46 2022
+000-INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/chomper/workspace/Vivado/Vitis/compute_kernels/Hardware/build/compute.xo
+000-INFO: [SYSTEM_LINK 82-53] Creating IP database /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+000-INFO: [SYSTEM_LINK 82-38] [18:10:46] build_xd_ip_db started: /home/chomper/workspace/Xilinx/Vitis/2021.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/hw.hpfm -clkid 0 -ip /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/iprepo/xilinx_com_hls_compute_1_0,compute -o /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+000-INFO: [SYSTEM_LINK 82-37] [18:10:50] build_xd_ip_db finished successfully
+000-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2105.641 ; gain = 510.070 ; free physical = 51081 ; free virtual = 55918
+000-INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+000-INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/cfgraph/cfgen_cfgraph.xml
+000-INFO: [SYSTEM_LINK 82-38] [18:10:50] cfgen started: /home/chomper/workspace/Xilinx/Vitis/2021.2/bin/cfgen  -nk compute:1:compute_1 -dmclkid 0 -r /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/cfgraph/cfgen_cfgraph.xml
+000-INFO: [CFGEN 83-0] Kernel Specs: 
+000-INFO: [CFGEN 83-0]   kernel: compute, num: 1  {compute_1}
+000-INFO: [CFGEN 83-2226] Inferring mapping for argument compute_1.rmem to HBM[0]
+000-INFO: [CFGEN 83-2226] Inferring mapping for argument compute_1.omem to HBM[0]
+000-INFO: [SYSTEM_LINK 82-37] [18:10:53] cfgen finished successfully
+000-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2105.641 ; gain = 0.000 ; free physical = 51080 ; free virtual = 55917
+000-INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+000-INFO: [SYSTEM_LINK 82-38] [18:10:53] cf2bd started: /home/chomper/workspace/Xilinx/Vitis/2021.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/_sysl/.xsd --temp_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link --output_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int --target_bd ulp.bd
+000-INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+000-INFO: [CF2BD 82-28] cf2xd finished successfully
+000-INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/sys_link/_sysl/.xsd
+000-INFO: [CF2BD 82-28] cf_xsd finished successfully
+000-INFO: [SYSTEM_LINK 82-37] [18:10:59] cf2bd finished successfully
+000-Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2105.641 ; gain = 0.000 ; free physical = 51089 ; free virtual = 55921
+000-INFO: [v++ 60-1441] [18:10:59] Run run_link: Step system_link: Completed
+000-Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2063.531 ; gain = 0.000 ; free physical = 51133 ; free virtual = 55965
+000-INFO: [v++ 60-1443] [18:10:59] Run run_link: Step cf2sw: Started
+000-INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/sdsl.dat -rtd /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/cf2sw.rtd -nofilter /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/cf2sw_full.rtd -xclbin /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/xclbin_orig.xml -o /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/xclbin_orig.1.xml
+000-INFO: [v++ 60-1454] Run Directory: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link
+000-INFO: [v++ 60-1441] [18:11:02] Run run_link: Step cf2sw: Completed
+000-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2063.531 ; gain = 0.000 ; free physical = 51127 ; free virtual = 55964
+000-INFO: [v++ 60-1443] [18:11:02] Run run_link: Step rtd2_system_diagram: Started
+000-INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+000-INFO: [v++ 60-1454] Run Directory: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link
+000-INFO: [v++ 60-1441] [18:11:02] Run run_link: Step rtd2_system_diagram: Completed
+000-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2063.531 ; gain = 0.000 ; free physical = 51114 ; free virtual = 55951
+000-INFO: [v++ 60-1443] [18:11:02] Run run_link: Step vpl: Started
+000-INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u55n_gen3x4_xdma_1_202110_1 --remote_ip_cache /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/.ipcache -s --output_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int --log_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/logs/link --report_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/reports/link --config /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/vplConfig.ini -k /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link --no-info --iprepo /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/xo/ip_repo/xilinx_com_hls_compute_1_0 --messageDb /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link/vpl.pb /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/dr.bd.tcl
+000-INFO: [v++ 60-1454] Run Directory: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link
+000-
+000-****** vpl v2021.2 (64-bit)
+000-  **** SW Build 3363252 on 2021-10-14-04:41:01
+000-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [VPL 60-839] Read in kernel information from file '/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/kernel_info.dat'.
+000-INFO: [VPL 74-78] Compiler Version string: 2021.2
+000-INFO: [VPL 60-423]   Target device: xilinx_u55n_gen3x4_xdma_1_202110_1
+000-INFO: [VPL 60-1032] Extracting hardware platform to /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/vivado/vpl/.local/hw_platform
+000-[18:11:16] Run vpl: Step create_project: Started
+000-Creating Vivado project.
+000-[18:11:18] Run vpl: Step create_project: Completed
+000-[18:11:18] Run vpl: Step create_bd: Started
+000-[18:11:30] Run vpl: Step create_bd: Completed
+000-[18:11:30] Run vpl: Step update_bd: Started
+000-[18:11:30] Run vpl: Step update_bd: Completed
+000-[18:11:30] Run vpl: Step generate_target: Started
+000-[18:11:52] Run vpl: Step generate_target: Completed
+000-[18:11:52] Run vpl: Step config_hw_runs: Started
+000-[18:11:53] Run vpl: Step config_hw_runs: Completed
+000-[18:11:53] Run vpl: Step synth: Started
+000-[18:12:23] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:12:54] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:13:24] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:13:54] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:14:24] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:14:54] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:15:24] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:15:54] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:16:24] Block-level synthesis in progress, 0 of 1 jobs complete, 1 job running.
+000-[18:16:54] Block-level synthesis in progress, 1 of 1 jobs complete, 0 jobs running.
+000-[18:17:25] Top-level synthesis in progress.
+000-[18:17:39] Run vpl: Step synth: Completed
+000-[18:17:39] Run vpl: Step impl: Started
+000-[18:20:39] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 09m 33s 
+000-
+000-[18:20:39] Starting logic optimization..
+000-[18:21:10] Phase 1 Retarget
+000-[18:21:10] Phase 2 Constant propagation
+000-[18:21:10] Phase 3 Sweep
+000-[18:21:40] Phase 4 BUFG optimization
+000-[18:21:40] Phase 5 Shift Register Optimization
+000-[18:21:40] Phase 6 Post Processing Netlist
+000-[18:22:10] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 01m 30s 
+000-
+000-[18:22:10] Starting logic placement..
+000-[18:22:10] Phase 1 Placer Initialization
+000-[18:22:40] Phase 1.1 Placer Initialization Netlist Sorting
+000-[18:23:10] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+000-[18:23:40] Phase 1.3 Build Placer Netlist Model
+000-[18:24:10] Phase 1.4 Constrain Clocks/Macros
+000-[18:24:10] Phase 2 Global Placement
+000-[18:24:10] Phase 2.1 Floorplanning
+000-[18:24:10] Phase 2.1.1 Partition Driven Placement
+000-[18:24:10] Phase 2.1.1.1 PBP: Partition Driven Placement
+000-[18:25:41] Phase 2.1.1.2 PBP: Clock Region Placement
+000-[18:25:41] Phase 2.1.1.3 PBP: Compute Congestion
+000-[18:25:41] Phase 2.1.1.4 PBP: UpdateTiming
+000-[18:26:11] Phase 2.1.1.5 PBP: Add part constraints
+000-[18:26:11] Phase 2.2 Physical Synthesis After Floorplan
+000-[18:26:11] Phase 2.3 Update Timing before SLR Path Opt
+000-[18:26:11] Phase 2.4 Post-Processing in Floorplanning
+000-[18:26:11] Phase 2.5 Global Placement Core
+000-[18:29:12] Phase 2.5.1 Physical Synthesis In Placer
+000-[18:30:42] Phase 3 Detail Placement
+000-[18:30:42] Phase 3.1 Commit Multi Column Macros
+000-[18:30:42] Phase 3.2 Commit Most Macros & LUTRAMs
+000-[18:30:42] Phase 3.3 Small Shape DP
+000-[18:30:42] Phase 3.3.1 Small Shape Clustering
+000-[18:31:12] Phase 3.3.2 Flow Legalize Slice Clusters
+000-[18:31:12] Phase 3.3.3 Slice Area Swap
+000-[18:32:12] Phase 3.4 Place Remaining
+000-[18:32:12] Phase 3.5 Re-assign LUT pins
+000-[18:32:12] Phase 3.6 Pipeline Register Optimization
+000-[18:32:12] Phase 3.7 Fast Optimization
+000-[18:32:43] Phase 4 Post Placement Optimization and Clean-Up
+000-[18:32:43] Phase 4.1 Post Commit Optimization
+000-[18:33:13] Phase 4.1.1 Post Placement Optimization
+000-[18:33:13] Phase 4.1.1.1 BUFG Insertion
+000-[18:33:13] Phase 1 Physical Synthesis Initialization
+000-[18:33:13] Phase 4.1.1.2 BUFG Replication
+000-[18:33:13] Phase 4.1.1.3 Post Placement Timing Optimization
+000-[18:33:43] Phase 4.1.1.4 Replication
+000-[18:34:13] Phase 4.2 Post Placement Cleanup
+000-[18:34:13] Phase 4.3 Placer Reporting
+000-[18:34:13] Phase 4.3.1 Print Estimated Congestion
+000-[18:34:13] Phase 4.4 Final Placement Cleanup
+000-[18:35:43] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 00h 13m 33s 
+000-
+000-[18:35:43] Starting logic routing..
+000-[18:35:43] Phase 1 Build RT Design
+000-[18:36:44] Phase 2 Router Initialization
+000-[18:36:44] Phase 2.1 Fix Topology Constraints
+000-[18:36:44] Phase 2.2 Pre Route Cleanup
+000-[18:36:44] Phase 2.3 Global Clock Net Routing
+000-[18:36:44] Phase 2.4 Update Timing
+000-[18:37:44] Phase 2.5 Update Timing for Bus Skew
+000-[18:37:44] Phase 2.5.1 Update Timing
+000-[18:38:14] Phase 3 Initial Routing
+000-[18:38:14] Phase 3.1 Global Routing
+000-[18:38:44] Phase 4 Rip-up And Reroute
+000-[18:38:44] Phase 4.1 Global Iteration 0
+000-[19:11:25] Phase 4.2 Global Iteration 1
+000-[19:29:00] Phase 4.3 Global Iteration 2
+000-[19:42:05] Phase 4.4 Global Iteration 3
+000-[19:55:39] Phase 4.5 Global Iteration 4
+000-[20:08:13] Phase 5 Delay and Skew Optimization
+000-[20:08:13] Phase 5.1 Delay CleanUp
+000-[20:08:43] Phase 5.2 Clock Skew Optimization
+000-[20:08:43] Phase 6 Post Hold Fix
+000-[20:08:43] Phase 6.1 Hold Fix Iter
+000-[20:08:43] Phase 6.1.1 Update Timing
+000-[20:09:13] Phase 7 Leaf Clock Prog Delay Opt
+000-[20:09:43] Phase 8 Route finalize
+000-[20:09:43] Phase 9 Verifying routed nets
+000-[20:09:43] Phase 10 Depositing Routes
+000-[20:09:43] Phase 11 Resolve XTalk
+000-[20:10:14] Phase 12 Post Router Timing
+000-[20:10:14] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 01h 34m 30s 
+000-
+000-[20:10:14] Starting bitstream generation..
+000-[20:14:15] Creating bitmap...
+000-[20:15:45] Writing bitstream ./level0_i_ulp_my_rm_partial.bit...
+000-[20:15:45] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 05m 31s 
+000-[20:15:54] Run vpl: Step impl: Completed
+000-[20:15:54] Run vpl: FINISHED. Run Status: impl Complete!
+000-INFO: [v++ 60-1441] [20:15:54] Run run_link: Step vpl: Completed
+000-Time (s): cpu = 00:00:30 ; elapsed = 02:04:52 . Memory (MB): peak = 2063.531 ; gain = 0.000 ; free physical = 47894 ; free virtual = 52716
+000-INFO: [v++ 60-1443] [20:15:54] Run run_link: Step rtdgen: Started
+000-INFO: [v++ 60-1453] Command Line: rtdgen
+000-INFO: [v++ 60-1454] Run Directory: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link
+000-INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+000-INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+000-INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+000-INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 450, Kernel (KERNEL) clock: ulp_ucs/aclk_kernel_01 = 500, Kernel (DATA) clock: ulp_ucs/aclk_kernel_00 = 300
+000-INFO: [v++ 60-1453] Command Line: cf2sw -a /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/address_map.xml -sdsl /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/sdsl.dat -xclbin /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/xclbin_orig.xml -rtd /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute.rtd -o /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute.xml
+000-INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+000-INFO: [v++ 60-1441] [20:15:56] Run run_link: Step rtdgen: Completed
+000-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2063.531 ; gain = 0.000 ; free physical = 47861 ; free virtual = 52681
+000-INFO: [v++ 60-1443] [20:15:56] Run run_link: Step xclbinutil: Started
+000-INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute.rtd --append-section :JSON:/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute_xml.rtd --add-section BUILD_METADATA:JSON:/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute.xml --add-section SYSTEM_METADATA:RAW:/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u55n_gen3x4_xdma_1_202110_1 --output /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.xclbin
+000-INFO: [v++ 60-1454] Run Directory: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link
+000-XRT Build Version: 2.12.427 (2021.2)
+000-       Build Date: 2021-10-08 22:06:50
+000-          Hash ID: 2719b6027e185000fc49783171631db03fc0ef79
+000-Creating a default 'in-memory' xclbin image.
+000-
+000-Section: 'BITSTREAM'(0) was successfully added.
+000-Size   : 33419238 bytes
+000-Format : RAW
+000-File   : '/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/partial.bit'
+000-
+000-Section: 'MEM_TOPOLOGY'(6) was successfully added.
+000-Format : JSON
+000-File   : 'mem_topology'
+000-
+000-Section: 'IP_LAYOUT'(8) was successfully added.
+000-Format : JSON
+000-File   : 'ip_layout'
+000-
+000-Section: 'CONNECTIVITY'(7) was successfully added.
+000-Format : JSON
+000-File   : 'connectivity'
+000-
+000-Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+000-Size   : 410 bytes
+000-Format : JSON
+000-File   : '/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute_xml.rtd'
+000-
+000-Section: 'BUILD_METADATA'(14) was successfully added.
+000-Size   : 2263 bytes
+000-Format : JSON
+000-File   : '/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute_build.rtd'
+000-
+000-Section: 'EMBEDDED_METADATA'(2) was successfully added.
+000-Size   : 69400 bytes
+000-Format : RAW
+000-File   : '/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/compute.xml'
+000-
+000-Section: 'SYSTEM_METADATA'(22) was successfully added.
+000-Size   : 14527 bytes
+000-Format : RAW
+000-File   : '/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/int/systemDiagramModelSlrBaseAddress.json'
+000-
+000-Section: 'PARTITION_METADATA'(20) was successfully appended to.
+000-Format : JSON
+000-File   : 'partition_metadata'
+000-
+000-Section: 'IP_LAYOUT'(8) was successfully appended to.
+000-Format : JSON
+000-File   : 'ip_layout'
+000-Successfully wrote (33532026 bytes) to the output file: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.xclbin
+000-Leaving xclbinutil.
+000-INFO: [v++ 60-1441] [20:15:56] Run run_link: Step xclbinutil: Completed
+000-Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2063.531 ; gain = 0.000 ; free physical = 47863 ; free virtual = 52683
+000-INFO: [v++ 60-1443] [20:15:56] Run run_link: Step xclbinutilinfo: Started
+000-INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.xclbin.info --input /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.xclbin
+000-INFO: [v++ 60-1454] Run Directory: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link
+000-INFO: [v++ 60-1441] [20:15:57] Run run_link: Step xclbinutilinfo: Completed
+000-Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.33 . Memory (MB): peak = 2063.531 ; gain = 0.000 ; free physical = 47859 ; free virtual = 52679
+000-INFO: [v++ 60-1443] [20:15:57] Run run_link: Step generate_sc_driver: Started
+000-INFO: [v++ 60-1453] Command Line: 
+000-INFO: [v++ 60-1454] Run Directory: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/run_link
+000-INFO: [v++ 60-1441] [20:15:57] Run run_link: Step generate_sc_driver: Completed
+000-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2063.531 ; gain = 0.000 ; free physical = 47878 ; free virtual = 52679
+000-INFO: [v++ 60-244] Generating system estimate report...
+000-INFO: [v++ 60-1092] Generated system estimate report: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/reports/link/system_estimate_compute.xtxt
+000-INFO: [v++ 60-586] Created /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.ltx
+000-INFO: [v++ 60-586] Created compute.xclbin
+000-INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+000-	Timing Report: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt
+000-	Vivado Log: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/logs/link/vivado.log
+000-	Steps Log File: /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/logs/link/link.steps.log
+000-
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.xclbin.link_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 2h 5m 25s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+00255-
+20:15:57 Build Finished (took 2h:5m:29s.433ms)
+

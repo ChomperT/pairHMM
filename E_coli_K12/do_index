@@ -1,0 +1,13 @@
+#1 比对
+bwa mem -t 4 -R '@RG\tID:foo\tPL:illumina\tSM:E.coli_K12' ./input/fasta/E.coli_K12_MG1655.fa ./input/fastq/SRR1770413_1.fastq.gz ./input/fastq/SRR1770413_2.fastq.gz | samtools view -Sb - > ./E_coli_K12.bam
+
+#2 排序
+samtools sort -@ 4 -m 4G -O bam -o ./E_coli_K12.sorted.bam ./E_coli_K12.bam
+
+#3 标记PCR重复
+java -jar ../prebuilt/gatk.jar MarkDuplicates -I ./E_coli_K12.sorted.bam -O ./E_coli_K12.sorted.markdup.bam -M ./E_coli_K12.sorted.markdup_metrics.txt
+rm -f ./E_coli_K12.bam
+rm -f ./E_coli_K12.sorted.bam
+
+#5 创建比对索引文件
+samtools index ./E_coli_K12.sorted.markdup.bam 

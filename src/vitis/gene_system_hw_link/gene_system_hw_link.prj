@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hwlink:HwLinkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hwlink="http://www.xilinx.com/acceleration/hwlink" name="gene_system_hw_link" platform="/opt/xilinx/platforms/xilinx_u55n_gen3x4_xdma_1_202110_1/xilinx_u55n_gen3x4_xdma_1_202110_1.xpfm" systemProject="gene_system" cpu="pl">
+  <configuration name="Emulation-SW" id="com.xilinx.ide.accel.config.hwlink.sw_emu.936152343">
+    <configBuildOptions xsi:type="hwlink:LinkOptions">
+      <binaryContainers name="compute" traceMemory="FIFO:8K">
+        <kernels name="compute" projectName="compute_kernels">
+          <computeUnits name="compute_1" slr="">
+            <args name="rmem" master="true" memory="Auto"/>
+            <args name="omem" master="true" memory="Auto"/>
+            <args name="max"/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="hwlink:LinkOptions">
+      <binaryContainers name="binary_container_1">
+        <kernels name="krnl_vadd" projectName="compute_kernels">
+          <computeUnits name="krnl_vadd_1" slr="">
+            <args name="in1" master="true" memory=""/>
+            <args name="in2" master="true" memory=""/>
+            <args name="out" master="true" memory=""/>
+            <args name="size"/>
+          </computeUnits>
+        </kernels>
+        <kernels name="compute" projectName="compute_kernels">
+          <computeUnits name="compute_1" slr="">
+            <args name="rmem" master="true" memory=""/>
+            <args name="omem" master="true" memory=""/>
+            <args name="max"/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.ide.accel.config.hwlink.hw_emu.84131872">
+    <configBuildOptions xsi:type="hwlink:LinkOptions" target="hw_emu">
+      <binaryContainers name="compute" traceMemory="FIFO:8K">
+        <kernels name="compute" projectName="compute_kernels">
+          <computeUnits name="compute_1" slr="">
+            <args name="rmem" master="true" memory="Auto"/>
+            <args name="omem" master="true" memory="Auto"/>
+            <args name="max"/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.ide.accel.config.hwlink.hw.463315119">
+    <configBuildOptions xsi:type="hwlink:LinkOptions" target="hw">
+      <binaryContainers name="compute" traceMemory="FIFO:8K">
+        <kernels name="compute" projectName="compute_kernels">
+          <computeUnits name="compute_1" slr="">
+            <args name="rmem" master="true" memory="Auto"/>
+            <args name="omem" master="true" memory="Auto"/>
+            <args name="max"/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="hwlink:LinkOptions" target="hw">
+      <binaryContainers name="compute" traceMemory="FIFO:8K">
+        <kernels name="compute" projectName="compute_kernels">
+          <computeUnits name="compute_1" slr="">
+            <args name="rmem" master="true" memory="Auto"/>
+            <args name="omem" master="true" memory="Auto"/>
+            <args name="max"/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+</hwlink:HwLinkProject>

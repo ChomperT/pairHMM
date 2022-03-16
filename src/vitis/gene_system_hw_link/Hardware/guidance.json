@@ -1,0 +1,422 @@
+{
+ "session": {
+  "name": "Hardware",
+  "uuid": "04135a9f-3d9b-4bea-9cf2-c9e2c3945f68",
+  "description": "Vitis IDE session Hardware",
+  "timestamp": "0",
+  "report_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/guidance.html",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "proto_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/guidance.pb",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "build_target": "",
+  "config_files": []
+ },
+ "violation_count": 2,
+ "waived_count": 0,
+ "affirmation_count": 2,
+ "violations": {
+  "hashmap": {
+   "275": {
+    "id": 275,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "AUTO-FREQ-SCALING-08",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "setting",
+       "url": {
+        "scheme": "HTTPS",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?t=vitis+guidance;v=2021.2;d=AUTO-FREQ-SCALING-08.html",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "For clock !%0!, the auto scaled frequency 304.7 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 300.0 MHz.",
+     "args": {
+      "arg": [
+       {
+        "ref": {
+         "type": "FILE",
+         "name": "clk_kernel_00_unbuffered_net",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "string_val": "304.7"
+       },
+       {
+        "string_val": "300.0"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "The automatic frequency scaling feature allows user kernels to operate in hardware, even if at a lower frequency than intended. In this case the clock may in fact be able to run at a higher frequency than specified. You may want to consider !URI%1! the clock frequency higher for better performance. The '--kernel_frequency' option is one way to control the frequency specification.",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "setting",
+         "url": {
+          "scheme": "HTTPS",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?t=vitis+guidance;v=2021.2;d=AUTO-FREQ-SCALING-08.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "compute",
+     "2": "Performance"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "276": {
+    "id": 276,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "AUTO-FREQ-SCALING-08",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "setting",
+       "url": {
+        "scheme": "HTTPS",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?t=vitis+guidance;v=2021.2;d=AUTO-FREQ-SCALING-08.html",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "For clock !%0!, the auto scaled frequency 464.4 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 450.0 MHz.",
+     "args": {
+      "arg": [
+       {
+        "ref": {
+         "type": "FILE",
+         "name": "hbm_aclk",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/chomper/workspace/Vivado/Vitis/gene_system_hw_link/Hardware/compute.build/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         }
+        },
+        "string_val": ""
+       },
+       {
+        "string_val": "464.4"
+       },
+       {
+        "string_val": "450.0"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "The automatic frequency scaling feature allows user kernels to operate in hardware, even if at a lower frequency than intended. In this case the clock may in fact be able to run at a higher frequency than specified. You may want to consider !URI%1! the clock frequency higher for better performance. The '--kernel_frequency' option is one way to control the frequency specification.",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "setting",
+         "url": {
+          "scheme": "HTTPS",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?t=vitis+guidance;v=2021.2;d=AUTO-FREQ-SCALING-08.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "compute",
+     "2": "Performance"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   }
+  }
+ },
+ "affirmations": {
+  "hashmap": {
+   "274": {
+    "id": 274,
+    "rule_key": "SYSLINK-1",
+    "examples": {
+     "uri": []
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Created top level block diagram design dr.bd.tcl",
+     "args": {
+      "arg": [
+       {
+        "string_val": "dr.bd.tcl"
+       }
+      ]
+     }
+    },
+    "categories": {},
+    "extended_categories": {},
+    "group": ""
+   },
+   "277": {
+    "id": 277,
+    "rule_key": "PLATFORM-CLOCK-DOMAINS-01",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "automatic frequency scaling",
+       "url": {
+        "scheme": "HTTPS",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?t=vitis+guidance;v=2021.2;d=PLATFORM-CLOCK-DOMAINS-01.html",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "= or \u003e",
+    "details": {
+     "text": "The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): \nKernel: ulp_ucs/aclk_kernel_01 = 500.0 MHz \nKernel: ulp_ucs/aclk_kernel_00 = 300.0 MHz \nSystem: hbm_aclk = 450.0 MHz \nScalable clock ulp_ucs/aclk_kernel_01 (Id = 1) is used for rtl kernels. This design has 0 rtl kernel(s).\nScalable clock ulp_ucs/aclk_kernel_00 (Id = 0) is used for hls kernels. This design has 1 hls kernel(s).",
+     "args": {
+      "arg": [
+       {
+        "string_val": "\nKernel: ulp_ucs/aclk_kernel_01 = 500.0 MHz \nKernel: ulp_ucs/aclk_kernel_00 = 300.0 MHz \nSystem: hbm_aclk = 450.0 MHz \nScalable clock ulp_ucs/aclk_kernel_01 (Id = 1) is used for rtl kernels. This design has 0 rtl kernel(s).\nScalable clock ulp_ucs/aclk_kernel_00 (Id = 0) is used for hls kernels. This design has 1 hls kernel(s)."
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "The !URI%1! feature allows user kernels to operate in hardware, even if at a lower frequency than intended."
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "System",
+     "2": "Performance"
+    },
+    "extended_categories": {},
+    "group": ""
+   }
+  }
+ },
+ "specs_violated": {
+  "hashmap": {
+   "AUTO-FREQ-SCALING-08": {
+    "key": "AUTO-FREQ-SCALING-08",
+    "full_name": "Auto frequency scaling - Higher frequency possible",
+    "owner": "sdx",
+    "raw_msg": "For clock %REF, the auto scaled frequency %s MHz exceeds the original specified frequency. The compiler will select the original specified frequency of %s MHz.",
+    "msg_abbrev": "",
+    "msg_id": "0",
+    "categories": {
+     "0": "Accelerator",
+     "1": "xclbin",
+     "2": "Performance"
+    },
+    "resolution_msg": "The automatic frequency scaling feature allows user kernels to operate in hardware, even if at a lower frequency than intended. In this case the clock may in fact be able to run at a higher frequency than specified. You may want to consider !URI%1! the clock frequency higher for better performance. The '--kernel_frequency' option is one way to control the frequency specification.",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "setting",
+       "url": {
+        "scheme": "HTTPS",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?t=vitis+guidance;v=2021.2;d=AUTO-FREQ-SCALING-08.html",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "severity": "SEV_ADVISORY",
+    "disposition": "ENABLED",
+    "expects": "",
+    "affirm_msg": "",
+    "dynamic_categories": {
+     "0": false,
+     "1": true,
+     "2": false
+    },
+    "extensible_categories": [],
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   }
+  }
+ },
+ "specs_affirmed": {
+  "hashmap": {
+   "SYSLINK-1": {
+    "key": "SYSLINK-1",
+    "full_name": "system_link Top Level BD Creation",
+    "owner": "system_link",
+    "raw_msg": "Created top level block diagram design %STR",
+    "msg_abbrev": "",
+    "msg_id": "0",
+    "categories": {},
+    "resolution_msg": "",
+    "severity": "SEV_FATAL",
+    "disposition": "ENABLED",
+    "expects": "",
+    "affirm_msg": "",
+    "dynamic_categories": {},
+    "extensible_categories": [],
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "PLATFORM-CLOCK-DOMAINS-01": {
+    "key": "PLATFORM-CLOCK-DOMAINS-01",
+    "full_name": "Runtime controllable clock domains - Achieved clock frequency (MHz)",
+    "owner": "sdx",
+    "raw_msg": "One or more clocks failed a timing check.",
+    "msg_abbrev": "",
+    "msg_id": "0",
+    "categories": {
+     "1": "System",
+     "2": "Performance",
+     "0": "Accelerator"
+    },
+    "resolution_msg": "The !URI%1! feature allows user kernels to operate in hardware, even if at a lower frequency than intended.",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "automatic frequency scaling",
+       "url": {
+        "scheme": "HTTPS",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?t=vitis+guidance;v=2021.2;d=PLATFORM-CLOCK-DOMAINS-01.html",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "severity": "SEV_WARNING",
+    "disposition": "ENABLED",
+    "expects": "= or \u003e",
+    "affirm_msg": "The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): %s",
+    "description": {
+     "scheme": "DATA",
+     "host": "",
+     "port": 0,
+     "path": "",
+     "query": "",
+     "fragment": "",
+     "media_type": "text/html",
+     "encoding": "charset=UTF-8",
+     "data": "\u003chtml\u003e Kernel clocks (and system clocks for some platforms) are scalable; they can preserve functionality at the cost of performance by running at a lower frequency than requested. To be scalable, a clock must be driven by an MMCM where the control registers for the MMCM can be set by the runtime over AXI4-Lite. This item shows the final runtime controlled frequencies for the scalable clocks.\u003c/html\u003e"
+    },
+    "dynamic_categories": {
+     "0": false,
+     "1": false,
+     "2": false
+    },
+    "extensible_categories": [],
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   }
+  }
+ }
+}
+

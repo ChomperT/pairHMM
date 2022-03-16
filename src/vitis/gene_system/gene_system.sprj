@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:systemproject="http://www.xilinx.com/systemproject" name="gene_system" platform="/opt/xilinx/platforms/xilinx_u55n_gen3x4_xdma_1_202110_1/xilinx_u55n_gen3x4_xdma_1_202110_1.xpfm" platformUID="xilinx:u55n:gen3x4_xdma_1:202110.1" sysConfig="config0_0" rootFSLocation="" linuxImage="" sysroot="">
+  <configuration name="Emulation-SW" id="com.xilinx.sdx.system.managedbuilder.swemu.configuration.63473704">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="gene_system_hw_link" domainName="" domainPrettyName="pl" appBuildConfig="Emulation-SW"/>
+      <applications name="compute_kernels" domainName="" domainPrettyName="pl" appBuildConfig="Emulation-SW"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="test_kernels" domainName="" domainPrettyName="pl" appBuildConfig="Emulation-SW"/>
+      <applications name="test" domainName="x86" domainPrettyName="x86" appBuildConfig="Emulation-SW"/>
+      <applications name="gene_system_hw_link" domainName="" domainPrettyName="pl" appBuildConfig="Emulation-SW"/>
+      <applications name="compute_kernels" domainName="" domainPrettyName="pl" appBuildConfig="Emulation-SW"/>
+      <applications name="compute" domainName="x86" domainPrettyName="x86" appBuildConfig="Emulation-SW"/>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.sdx.system.managedbuilder.hwemu.configuration.1483697983">
+    <configBuildOptions xsi:type="systemproject:SystemOptions" target="hw_emu">
+      <applications name="gene_system_hw_link" domainName="" domainPrettyName="pl" appBuildConfig="Emulation-HW"/>
+      <applications name="compute_kernels" domainName="" domainPrettyName="pl" appBuildConfig="Emulation-HW"/>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.sdx.system.managedbuilder.hw.configuration.1071068955">
+    <configBuildOptions xsi:type="systemproject:SystemOptions" target="hw">
+      <applications name="gene_system_hw_link" domainName="" domainPrettyName="pl" appBuildConfig="Hardware"/>
+      <applications name="compute_kernels" domainName="" domainPrettyName="pl" appBuildConfig="Hardware"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="systemproject:SystemOptions" target="hw">
+      <applications name="gene_system_hw_link" domainName="" domainPrettyName="pl" appBuildConfig="Hardware"/>
+      <applications name="compute_kernels" domainName="" domainPrettyName="pl" appBuildConfig="Hardware"/>
+      <applications name="compute" domainName="x86" domainPrettyName="x86" appBuildConfig="Hardware"/>
+    </lastBuildOptions>
+  </configuration>
+</systemproject:SystemProject>

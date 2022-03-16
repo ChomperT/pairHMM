@@ -1,0 +1,91 @@
+diff --git a/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/CFGEngine.java b/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/CFGEngine.java
+new file mode 100644
+index 000000000..31af38f18
+--- /dev/null
++++ b/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/CFGEngine.java
+@@ -0,0 +1,33 @@
++package chomper.gatk.cfgengine;
++
++import java.io.File;
++import org.broadinstitute.gatk.nativebindings.pairhmm.HaplotypeDataHolder;
++import org.broadinstitute.gatk.nativebindings.pairhmm.PairHMMNativeArguments;
++import org.broadinstitute.gatk.nativebindings.pairhmm.PairHMMNativeBinding;
++import org.broadinstitute.gatk.nativebindings.pairhmm.ReadDataHolder;
++
++public class CFGEngine implements PairHMMNativeBinding {
++  private native void initNative(Class<?> paramClass1, Class<?> paramClass2);
++  
++  private native void doneNative();
++  
++  public native void computeNative(Object[] paramArrayOfObject1, Object[] paramArrayOfObject2, double[] paramArrayOfdouble);
++  
++  public boolean load(File tmpDir) {
++    System.loadLibrary("mgatk");
++    return true;
++  }
++  
++  public void initialize(PairHMMNativeArguments args) {
++    initNative(ReadDataHolder.class, HaplotypeDataHolder.class);
++  }
++  
++  public void computeLikelihoods(ReadDataHolder[] readDataArray, HaplotypeDataHolder[] haplotypeDataArray, double[] likelihoodArray) {
++    computeNative((Object[])readDataArray, (Object[])haplotypeDataArray, likelihoodArray);
++  }
++  
++  public void done() {
++    doneNative();
++  }
++}
++
+diff --git a/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/PairHMM.java b/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/PairHMM.java
+index 4858ed740..98ddd1113 100644
+--- a/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/PairHMM.java
++++ b/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/PairHMM.java
+@@ -71,6 +71,11 @@ public abstract class PairHMM implements Closeable{
+             logger.info("Using the FPGA-accelerated native PairHMM implementation");
+             return hmm;
+         }),
++        EXPERIMENTAL_CFG_LOGLESS_CACHING(args -> {
++            VectorLoglessPairHMM hmm = new VectorLoglessPairHMM(VectorLoglessPairHMM.Implementation.CFG, args);
++            PairHMM.logger.info("Using the CFG FPGA native PairHMM implementation");
++            return hmm;
++        }),
+         /* Uses the fastest available PairHMM implementation supported on the platform.
+            Order of precedence:
+             1. AVX_LOGLESS_CACHING_OMP
+diff --git a/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/VectorLoglessPairHMM.java b/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/VectorLoglessPairHMM.java
+index 9d6617800..5bcfefe0d 100644
+--- a/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/VectorLoglessPairHMM.java
++++ b/src/main/java/org/broadinstitute/hellbender/utils/pairhmm/VectorLoglessPairHMM.java
+@@ -13,7 +13,7 @@ import org.broadinstitute.hellbender.exceptions.UserException;
+ import org.broadinstitute.hellbender.utils.genotyper.LikelihoodMatrix;
+ import org.broadinstitute.hellbender.utils.haplotype.Haplotype;
+ import org.broadinstitute.hellbender.utils.read.GATKRead;
+-
++import chomper.gatk.cfgengine.CFGEngine;
+ import java.util.LinkedHashMap;
+ import java.util.List;
+ import java.util.Map;
+@@ -38,7 +38,8 @@ public final class VectorLoglessPairHMM extends LoglessPairHMM {
+         /**
+          * FPGA-accelerated version of PairHMM
+          */
+-        FPGA
++        FPGA,
++        CFG
+     }
+ 
+     private static final Logger logger = LogManager.getLogger(VectorLoglessPairHMM.class);
+@@ -85,7 +86,11 @@ public final class VectorLoglessPairHMM extends LoglessPairHMM {
+                     throw new UserException.HardwareFeatureException("Machine does not support FPGA PairHMM.");
+                 }
+                 break;
+-
++            case CFG:
++                pairHmm = new CFGEngine();
++                pairHmm.load(null);
++                break;
++                                
+             default:
+                 throw new UserException.HardwareFeatureException("Unknown PairHMM implementation.");
+         }
